@@ -20,14 +20,14 @@ driver.implicitly_wait(15)
 
 # Aceitar cookies ----- Funciona
 aceitarCookies = driver.find_element(By.ID,'onetrust-accept-btn-handler').click()
-time.sleep(3)
+time.sleep(5)
 
 # Negar novidades --- Nao funciona
 #negarNovidades = driver.find_element(By.CLASS_NAME, 'deny').click()
 
 
 # Procurar na barra de pesquisa
-'''
+
 
 # Encotrar barra de pesquisa 
 procurarBarra = driver.find_element(By.NAME,value='s')
@@ -35,18 +35,18 @@ procurarBarra = driver.find_element(By.NAME,value='s')
 # o que vai escrever na barra de pesquisa
 procurarBarra.send_keys("Receitas de panquecas")
 procurarBarra.send_keys(Keys.RETURN)
-'''
+
 
 # Contar panquecas --- não funciona diferença de upper e lower
-'''
+
 # Elemento a procurar
 elementoContar = str("Panquecas")
 
 # Localizar elemento
 contar = driver.find_elements(By.PARTIAL_LINK_TEXT,elementoContar)
 
-# Imprimmir a contagem
+# Imprimmir a contagem de panquecas
 print("Numero de vezes panquecas ", len(contar))
-'''
+
 
 
